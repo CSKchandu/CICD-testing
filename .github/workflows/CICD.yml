@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: UAT
-      url: 'http://development.app.com'
+      url: 'http://uat.app.com'
     steps:
       - name: Deploy
         run: echo I am deploying! 
@@ -34,8 +34,8 @@ jobs:
     needs: [Build]
     runs-on: ubuntu-latest
     environment: 
-      name: UAT
-      url: 'http://test.app.com'
+      name: Development
+      url: 'http://development.app.com'
     steps:
       - name: Deploy
         run: echo I am deploying! 
