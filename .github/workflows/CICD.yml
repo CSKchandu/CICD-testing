@@ -25,7 +25,7 @@ jobs:
            password: ${{ secrets.REGISTRY_TOKEN}}
            push: true # Will only build if this is not here
            tags: |
-            ${{ env.REGISTRY }}/${{ github.repository }}:${{ github.ref }}
+            ${{ env.REGISTRY }}/${{ github.repository }}:${{steps.get-tags.outputs.tags }}
             ${{ env.REGISTRY }}/${{ github.repository }}:latest
 
      # - name: Compile
