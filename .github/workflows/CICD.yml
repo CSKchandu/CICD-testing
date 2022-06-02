@@ -23,8 +23,8 @@ jobs:
         with:
           push: true # Will only build if this is not here
           tags: |
-            ghcr.io/${{ github.repository }}:${{ github.ref }}
-            ghcr.io/${{ github.repository }}:latest
+            github.com/${{ github.repository }}:${{ github.ref }}
+            github.com/${{ github.repository }}:latest
 
      # - name: Compile
        # run: echo Hello, world!
